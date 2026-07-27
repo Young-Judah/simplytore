@@ -1,0 +1,386 @@
+/* ==========================================
+   SIMPLYTORE CROCHET
+   ANIMATIONS
+========================================== */
+
+/* ---------- Fade In ---------- */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-text{
+    animation:fadeUp .9s ease forwards;
+}
+
+.hero-image{
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.categories,
+.products,
+.about-preview,
+.learn,
+.reviews,
+.cta{
+
+    animation:fadeUp 1s ease both;
+    animation-timeline:view();
+    animation-range:entry 15% cover 30%;
+
+}
+
+/* ---------- Floating Hero ---------- */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.hero-image img{
+
+    animation:
+        fadeUp 1s ease,
+        float 6s ease-in-out infinite;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.btn{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    background:rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+.btn:hover::after{
+
+    width:320px;
+    height:320px;
+
+}
+
+/* ---------- Product Cards ---------- */
+
+.product,
+.card{
+
+    transition:
+        transform .35s,
+        box-shadow .35s;
+
+}
+
+.product:hover,
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ---------- Image Zoom ---------- */
+
+.product img,
+.hero-image img,
+.split img{
+
+    transition:transform .6s;
+
+}
+
+.product:hover img,
+.hero-image:hover img,
+.split:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ---------- Navigation ---------- */
+
+header{
+
+    transition:
+        padding .35s,
+        background .35s,
+        box-shadow .35s;
+
+}
+
+/* ---------- Links ---------- */
+
+nav a{
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:3px;
+
+    left:0;
+
+    bottom:-8px;
+
+    border-radius:20px;
+
+    background:#F39DB8;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ---------- Category Icons ---------- */
+
+.card{
+
+    position:relative;
+
+}
+
+.card:hover{
+
+    rotate:-2deg;
+
+}
+
+/* ---------- CTA ---------- */
+
+.cta .btn{
+
+    animation:pulse 2.8s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:
+        0 0 0 0 rgba(243,157,184,.45);
+
+    }
+
+    70%{
+
+        box-shadow:
+        0 0 0 18px rgba(243,157,184,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 0 rgba(243,157,184,0);
+
+    }
+
+}
+
+/* ---------- Decorative Blobs ---------- */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    background:#FCE5EE;
+
+    border-radius:50%;
+
+    top:-120px;
+    left:-100px;
+
+    z-index:-1;
+
+    filter:blur(10px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    background:#E9F4E6;
+
+    border-radius:50%;
+
+    right:-80px;
+    bottom:-80px;
+
+    z-index:-1;
+
+    filter:blur(10px);
+
+}
+
+/* ---------- Section Dividers ---------- */
+
+section{
+
+    position:relative;
+
+}
+
+section::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    background:rgba(243,157,184,.25);
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    transition:.4s;
+
+}
+
+footer:hover{
+
+    background:#F6E8EC;
+
+}
+
+/* ---------- Selection ---------- */
+
+::selection{
+
+    background:#F39DB8;
+
+    color:white;
+
+}
+.hero-image{
+
+    position:relative;
+
+}
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-18px;
+
+    background:#FFDDE8;
+
+    border-radius:40px;
+
+    z-index:-2;
+
+    transform:rotate(-3deg);
+
+}
+
+.hero-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-10px;
+
+    background:white;
+
+    border-radius:40px;
+
+    z-index:-1;
+
+    transform:rotate(2deg);
+
+}
