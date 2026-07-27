@@ -1,0 +1,526 @@
+/* ===========================================
+   SIMPLYTORE CROCHET
+   MAIN STYLESHEET
+=========================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FFF9F7;
+    color:#4B3A40;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* ---------- COLORS ---------- */
+
+:root{
+
+--pink:#F8D6E2;
+--pink-dark:#F39DB8;
+--pink-hover:#EE89A9;
+
+--cream:#FFF9F7;
+
+--sage:#DDE8D8;
+
+--white:#ffffff;
+
+--text:#49383F;
+
+--shadow:0 15px 35px rgba(0,0,0,.08);
+
+--radius:28px;
+
+}
+
+/* ---------- ANNOUNCEMENT ---------- */
+
+.announcement{
+
+background:var(--pink-dark);
+
+color:white;
+
+text-align:center;
+
+padding:.8rem;
+
+font-size:.9rem;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+background:rgba(255,255,255,.90);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 3px 20px rgba(0,0,0,.05);
+
+}
+
+.nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.logo img{
+
+height:65px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+}
+
+nav a{
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--pink-dark);
+
+}
+
+.icons{
+
+display:flex;
+
+gap:22px;
+
+font-size:1.15rem;
+
+cursor:pointer;
+
+}
+
+.icons i:hover{
+
+color:var(--pink-dark);
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn{
+
+display:inline-block;
+
+padding:16px 34px;
+
+border-radius:999px;
+
+background:var(--pink-dark);
+
+color:white;
+
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+background:var(--pink-hover);
+
+transform:translateY(-3px);
+
+}
+
+.secondary{
+
+background:white;
+
+color:var(--text);
+
+border:2px solid var(--pink-dark);
+
+}
+
+.secondary:hover{
+
+background:var(--pink);
+
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+padding:90px 0;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:70px;
+
+}
+
+.hero h1{
+
+font-family:'Baloo 2',cursive;
+
+font-size:4rem;
+
+line-height:1.05;
+
+margin-bottom:20px;
+
+color:var(--text);
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+margin-bottom:35px;
+
+max-width:520px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-image img{
+
+border-radius:40px;
+
+box-shadow:var(--shadow);
+
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+
+padding:90px 0;
+
+}
+
+section h2{
+
+font-family:'Baloo 2',cursive;
+
+font-size:2.7rem;
+
+text-align:center;
+
+margin-bottom:55px;
+
+}
+
+/* ---------- CATEGORIES ---------- */
+
+.categories{
+
+background:white;
+
+}
+
+.category-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.card{
+
+background:var(--cream);
+
+padding:45px 30px;
+
+text-align:center;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+cursor:pointer;
+
+font-size:3rem;
+
+}
+
+.card h3{
+
+font-size:1.2rem;
+
+margin-top:18px;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+/* ---------- PRODUCTS ---------- */
+
+.products{
+
+background:#FFF4F7;
+
+}
+
+.product-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+}
+
+/* Placeholder */
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+}
+
+.product-info{
+
+padding:20px;
+
+}
+
+/* ---------- SPLIT LAYOUT ---------- */
+
+.split{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.split img{
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+}
+
+.split h2{
+
+text-align:left;
+
+margin-bottom:20px;
+
+}
+
+.split p{
+
+margin-bottom:30px;
+
+}
+
+/* ---------- LEARN ---------- */
+
+.learn{
+
+background:var(--sage);
+
+}
+
+.learn ul{
+
+margin:30px 0;
+
+}
+
+.learn li{
+
+margin-bottom:15px;
+
+font-size:1.1rem;
+
+}
+
+/* ---------- REVIEWS ---------- */
+
+.reviews{
+
+background:white;
+
+}
+
+.review-slider{
+
+background:var(--cream);
+
+padding:60px;
+
+border-radius:30px;
+
+text-align:center;
+
+font-size:1.2rem;
+
+box-shadow:var(--shadow);
+
+}
+
+/* ---------- CTA ---------- */
+
+.cta{
+
+background:linear-gradient(
+135deg,
+#F8D6E2,
+#FCECF2
+);
+
+text-align:center;
+
+}
+
+.cta h2{
+
+margin-bottom:30px;
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+background:#F3E3E8;
+
+padding:60px 0;
+
+text-align:center;
+
+}
+
+footer p{
+
+margin:10px 0;
+
+}
+
+/* ---------- NICE SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#FFF9F7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#F39DB8;
+
+border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#EE89A9;
+
+}
