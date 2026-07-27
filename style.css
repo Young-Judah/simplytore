@@ -524,3 +524,86 @@ border-radius:999px;
 background:#EE89A9;
 
 }
+/* ==========================================
+   JAVASCRIPT CLASSES
+========================================== */
+
+.scrolled{
+
+    padding:6px 0;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.backToTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F39DB8;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+}
+
+.backToTop.visible{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.backToTop:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.clicked{
+
+    transform:scale(.96);
+
+}
